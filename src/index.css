@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FAF8F0;
+    color: #173D2A;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+
+  .tamil-text {
+    font-family: 'Noto Serif Tamil', 'Mukta Malar', serif;
+  }
+}
+
+/* Glassmorphism Styles */
+.glass-nav {
+  background: rgba(250, 248, 240, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(220, 232, 213, 0.6);
+}
+
+.glass-nav-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(79, 138, 69, 0.15);
+  box-shadow: 0 4px 20px -2px rgba(23, 61, 42, 0.06);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(220, 232, 213, 0.8);
+}
+
+.glass-card-dark {
+  background: rgba(23, 61, 42, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(79, 138, 69, 0.3);
+}
+
+/* Floating Animations */
+@keyframes leafFloat1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) rotate(4deg) scale(1.02);
+  }
+}
+
+@keyframes leafFloat2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-16px) rotate(-6deg) scale(0.98);
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(79, 138, 69, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 12px rgba(79, 138, 69, 0);
+  }
+}
+
+.animate-leaf-1 {
+  animation: leafFloat1 6s ease-in-out infinite;
+}
+
+.animate-leaf-2 {
+  animation: leafFloat2 8s ease-in-out infinite;
+}
+
+.animate-whatsapp-pulse {
+  animation: gentlePulse 2.5s infinite;
+}
+
+/* Subtle pattern background */
+.bg-farm-pattern {
+  background-color: #FAF8F0;
+  background-image: radial-gradient(rgba(79, 138, 69, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-pattern-dots-dark {
+  background-image: radial-gradient(rgba(220, 232, 213, 0.12) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #B8CEAC;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4F8A45;
+}
+
+/* Smooth Image Transitions */
+.image-zoom-container {
+  overflow: hidden;
+}
+.image-zoom-target {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.image-zoom-container:hover .image-zoom-target {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
