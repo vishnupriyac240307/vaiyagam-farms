@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, MessageCircle, MapPin, Sprout, ArrowUpRight, Heart } from 'lucide-react';
+import { getAssetUrl } from '../utils/asset';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,7 +18,7 @@ export default function Footer() {
             {/* Logo in dedicated white container for maximum clarity & preserving original proportions */}
             <div className="inline-block bg-white rounded-2xl p-2 shadow-md">
               <img
-                src="/logo.png"
+                src={getAssetUrl('logo.png')}
                 alt="வையகம் Farms Logo"
                 className="h-14 sm:h-16 w-auto object-contain"
                 width="627"

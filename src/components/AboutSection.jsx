@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sprout, CheckCircle2, HeartHandshake, ShieldCheck, Sparkles, MapPin } from 'lucide-react';
+import { getAssetUrl } from '../utils/asset';
 
 export default function AboutSection() {
   const highlights = [
@@ -112,7 +113,7 @@ export default function AboutSection() {
               {/* Main Farm Photography */}
               <div className="relative rounded-3xl overflow-hidden shadow-card border-4 border-white image-zoom-container bg-forest/5">
                 <img
-                  src="/images/about-farm.jpg"
+                  src={getAssetUrl('images/about-farm.jpg')}
                   alt="Farmers working together cultivating crops in Tamil Nadu fields"
                   className="w-full h-[430px] sm:h-[500px] object-cover image-zoom-target"
                   loading="lazy"

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, MessageCircle, Menu, X, ArrowUpRight } from 'lucide-react';
+import { getAssetUrl } from '../utils/asset';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,7 +71,7 @@ export default function Navbar() {
           >
             <div className="bg-white/95 border border-sage/60 rounded-xl p-1 shadow-sm transition-transform duration-300 group-hover:scale-102 flex items-center justify-center">
               <img
-                src="/logo.png"
+                src={getAssetUrl('logo.png')}
                 alt="வையகம் Farms Logo"
                 className="h-10 sm:h-12 w-auto object-contain"
                 width="627"

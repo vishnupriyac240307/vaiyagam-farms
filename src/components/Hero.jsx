@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, MessageCircle, Sparkles, Sprout, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { getAssetUrl } from '../utils/asset';
 
 export default function Hero() {
   const whatsappUrl = "https://wa.me/917904637078?text=Hello%20%E0%AE%B5%E0%AF%88%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D%20Farms!%20I%20would%20like%20to%20order%20fresh%20agricultural%20products.%20Please%20share%20the%20details.";
@@ -9,7 +10,7 @@ export default function Hero() {
       {/* Background Hero Image with Natural Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero-farm.jpg"
+          src={getAssetUrl('images/hero-farm.jpg')}
           alt="Lush green Tamil Nadu agricultural farm and coconut groves"
           className="w-full h-full object-cover object-center scale-105 transform motion-safe:animate-pulse-subtle"
           loading="eager"

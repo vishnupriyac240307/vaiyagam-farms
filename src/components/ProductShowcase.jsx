@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MessageCircle, Sprout, ArrowUpRight, Check, Droplets, Sparkles, CircleDot } from 'lucide-react';
+import { getAssetUrl } from '../utils/asset';
 
 export default function ProductShowcase() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -10,7 +11,7 @@ export default function ProductShowcase() {
       title: 'Fresh Vegetables',
       tamilTitle: 'புதிய காய்கறிகள்',
       badge: 'Farm-Fresh Harvest',
-      image: '/images/vegetables.jpg',
+      image: getAssetUrl('images/vegetables.jpg'),
       alt: 'Basket of fresh farm vegetables including tomatoes, carrots, greens, and beans',
       description:
         'Fresh vegetables sourced directly from farmers, selected with care to bring quality and natural goodness to your table.',
@@ -28,7 +29,7 @@ export default function ProductShowcase() {
       title: 'Fresh Coconuts',
       tamilTitle: 'பச்சை & முற்றிய தேங்காய்',
       badge: 'Natural & Wholesome',
-      image: '/images/coconuts.jpg',
+      image: getAssetUrl('images/coconuts.jpg'),
       alt: 'Fresh mature coconuts, husked and whole from Tamil Nadu coconut palms',
       description:
         'Quality coconuts carefully sourced from farmers, suitable for everyday household needs and bulk requirements.',
@@ -46,7 +47,7 @@ export default function ProductShowcase() {
       title: 'Coconut Oil',
       tamilTitle: 'தரமான தேங்காய் எண்ணெய்',
       badge: 'Pure Everyday Essential',
-      image: '/images/coconut-oil.jpg',
+      image: getAssetUrl('images/coconut-oil.jpg'),
       alt: 'Pure virgin coconut oil in glass jar surrounded by fresh coconut pieces',
       description:
         'Quality coconut oil for customers looking for a dependable source of this versatile everyday essential.',
