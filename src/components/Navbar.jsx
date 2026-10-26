@@ -67,10 +67,10 @@ export default function Navbar() {
           <a
             href="#hero"
             onClick={() => handleLinkClick('hero')}
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-leaf/50 rounded-xl"
+            className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-leaf/50 rounded-xl flex-shrink-0"
             aria-label="வையகம் Farms Home"
           >
-            <div className="bg-white/95 border border-sage/60 rounded-xl p-1 shadow-sm transition-transform duration-300 group-hover:scale-102 flex items-center justify-center">
+            <div className="bg-white/95 border border-sage/60 rounded-xl p-1 shadow-sm transition-transform duration-300 group-hover:scale-102 flex items-center justify-center flex-shrink-0">
               <img
                 src={getAssetUrl('logo.png')}
                 alt="வையகம் Farms Logo"
@@ -79,19 +79,19 @@ export default function Navbar() {
                 height="431"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="font-heading text-lg sm:text-xl font-bold tracking-tight text-forest flex items-center gap-1.5">
+            <div className="flex flex-col whitespace-nowrap">
+              <span className="font-heading text-base sm:text-lg xl:text-xl font-bold tracking-tight text-forest flex items-center gap-1.5">
                 <span className="tamil-text font-bold text-forest">வையகம்</span>
                 <span className="text-leaf font-serif font-semibold">Farms</span>
               </span>
-              <span className="text-[10px] sm:text-xs font-medium tracking-wider uppercase text-forest/70">
+              <span className="text-[9px] sm:text-[10px] xl:text-xs font-medium tracking-wider uppercase text-forest/70">
                 Farm-Direct Goodness
               </span>
             </div>
           </a>
 
-          {/* Desktop Navigation Links with Active Underline Bar */}
-          <nav className="hidden lg:flex items-center gap-2 xl:gap-3">
+          {/* Desktop Navigation Links with Active Underline Bar (strictly single-line) */}
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-2 flex-shrink-0">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
@@ -99,13 +99,13 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => handleLinkClick(link.id)}
-                  className={`px-3 py-2 text-sm font-medium transition-colors relative flex flex-col items-center ${
+                  className={`px-2.5 xl:px-3 py-1.5 text-xs xl:text-sm font-medium transition-colors relative flex flex-col items-center whitespace-nowrap ${
                     isActive
                       ? 'text-leaf font-semibold'
                       : 'text-forest/80 hover:text-leaf'
                   }`}
                 >
-                  <span>{link.name}</span>
+                  <span className="whitespace-nowrap">{link.name}</span>
                   {/* Active Indicator Underline matching requested visual */}
                   <span
                     className={`absolute bottom-0 left-2 right-2 h-[2.5px] bg-leaf rounded-full transition-all duration-200 ${
@@ -119,26 +119,26 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Desktop Action Buttons */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* Desktop Action Buttons (strictly single-line, no wrapping) */}
+          <div className="hidden md:flex items-center gap-2 xl:gap-3 flex-shrink-0">
             <a
               href="tel:+917904637078"
-              className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold text-forest hover:text-leaf bg-white/70 hover:bg-white border border-sage/70 rounded-full transition-all duration-200 shadow-sm"
+              className="inline-flex items-center gap-1.5 xl:gap-2 px-3 xl:px-3.5 py-2 text-xs font-semibold text-forest hover:text-leaf bg-white/70 hover:bg-white border border-sage/70 rounded-full transition-all duration-200 shadow-sm whitespace-nowrap flex-shrink-0"
               title="Call வையகம் Farms"
             >
-              <Phone className="w-3.5 h-3.5 text-leaf" />
-              <span>+91 79046 37078</span>
+              <Phone className="w-3.5 h-3.5 text-leaf flex-shrink-0" />
+              <span className="whitespace-nowrap tracking-tight">+91 79046 37078</span>
             </a>
 
             <a
               href="https://wa.me/917904637078?text=Hello%20%E0%AE%B5%E0%AF%88%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D%20Farms!%20I%20would%20like%20to%20enquire%20about%20your%20products."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-leaf hover:bg-leaf-hover rounded-full shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center gap-1.5 xl:gap-2 px-3.5 xl:px-4 py-2 text-xs font-semibold text-white bg-leaf hover:bg-leaf-hover rounded-full shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap flex-shrink-0"
             >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>WhatsApp Us</span>
-              <ArrowUpRight className="w-3 h-3 opacity-80" />
+              <MessageCircle className="w-3.5 h-3.5 flex-shrink-0" />
+              <span className="whitespace-nowrap">WhatsApp Us</span>
+              <ArrowUpRight className="w-3 h-3 opacity-80 flex-shrink-0" />
             </a>
           </div>
 

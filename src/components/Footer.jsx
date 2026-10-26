@@ -142,10 +142,10 @@ export default function Footer() {
             <div className="pt-3 space-y-2">
               <a
                 href="tel:+917904637078"
-                className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-xs text-white border border-white/15 transition-colors"
+                className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-xs text-white border border-white/15 transition-colors whitespace-nowrap"
               >
-                <Phone className="w-3.5 h-3.5 text-leaf-light" />
-                <span>Call: +91 79046 37078</span>
+                <Phone className="w-3.5 h-3.5 text-leaf-light flex-shrink-0" />
+                <span className="whitespace-nowrap">Call: +91 79046 37078</span>
               </a>
 
               <div>
@@ -153,10 +153,10 @@ export default function Footer() {
                   href="https://wa.me/917904637078?text=Hello%20%E0%AE%B5%E0%AF%88%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D%20Farms!%20I%20would%20like%20to%20enquire%20about%20your%20products."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-leaf hover:bg-leaf-hover text-xs text-white font-semibold transition-all shadow-sm"
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-leaf hover:bg-leaf-hover text-xs text-white font-semibold transition-all shadow-sm whitespace-nowrap"
                 >
-                  <MessageCircle className="w-3.5 h-3.5" />
-                  <span>WhatsApp: +91 79046 37078</span>
+                  <MessageCircle className="w-3.5 h-3.5 flex-shrink-0" />
+                  <span className="whitespace-nowrap">WhatsApp: +91 79046 37078</span>
                 </a>
               </div>
             </div>
