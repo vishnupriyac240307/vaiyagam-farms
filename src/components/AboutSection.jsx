@@ -98,10 +98,16 @@ export default function AboutSection() {
                 <span className="text-xs">→</span>
               </a>
 
-              <div className="flex items-center gap-2 text-xs font-semibold text-forest/80 px-4 py-2 rounded-full bg-sage/30 border border-sage/50">
+              <a
+                href="https://www.google.com/maps/place/%E0%AE%B5%E0%AF%88%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D+%E0%AE%83%E0%AE%AA%E0%AE%BE%E0%AE%B0%E0%AF%8D%E0%AE%AE%E0%AF%8D(vaiyagam+farms)/@10.6342564,77.3375498,17z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-xs font-semibold text-forest/80 hover:text-leaf px-4 py-2 rounded-full bg-sage/30 hover:bg-sage/50 border border-sage/50 transition-colors"
+                title="View வையகம் ஃபார்ம் on Google Maps"
+              >
                 <MapPin className="w-3.5 h-3.5 text-leaf" />
-                <span>Tamil Nadu, India</span>
-              </div>
+                <span>வையகம் ஃபார்ம், Tamil Nadu ↗</span>
+              </a>
             </div>
 
           </div>

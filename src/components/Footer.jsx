@@ -40,10 +40,16 @@ export default function Footer() {
               Bringing you fresh, quality agricultural products sourced directly from farmers, with care, trust, and a commitment to natural goodness.
             </p>
 
-            <div className="flex items-center gap-2 text-xs text-sage-light/70 pt-2">
-              <MapPin className="w-4 h-4 text-leaf-light flex-shrink-0" />
-              <span>Sourced &amp; Coordinated in Tamil Nadu, India</span>
-            </div>
+            <a
+              href="https://www.google.com/maps/place/%E0%AE%B5%E0%AF%88%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D+%E0%AE%83%E0%AE%AA%E0%AE%BE%E0%AE%B0%E0%AF%8D%E0%AE%AE%E0%AF%8D(vaiyagam+farms)/@10.6342564,77.3375498,17z"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs text-sage-light/80 hover:text-white transition-colors pt-2 group"
+              title="View வையகம் ஃபார்ம் on Google Maps"
+            >
+              <MapPin className="w-4 h-4 text-leaf-light flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <span>வையகம் ஃபார்ம், Tamil Nadu (View Map ↗)</span>
+            </a>
           </div>
 
           {/* Quick Links (Cols 6-8) */}

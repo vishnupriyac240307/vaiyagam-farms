@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MessageCircle, MapPin, Send, CheckCircle2, AlertCircle, Clock, Sparkles, CheckCheck } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Send, CheckCircle2, AlertCircle, Clock, Sparkles, CheckCheck, ArrowUpRight, Navigation } from 'lucide-react';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -14,6 +14,9 @@ export default function ContactSection() {
     error: '',
     lastGeneratedUrl: '',
   });
+
+  const googleMapsUrl =
+    'https://www.google.com/maps/place/%E0%AE%B5%E0%AF%88%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D+%E0%AE%83%E0%AE%AA%E0%AE%BE%E0%AE%B0%E0%AF%8D%E0%AE%AE%E0%AF%8D(vaiyagam+farms)/@10.6342564,77.3375498,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba9c9f2862303cf:0x5268c663da4a99ee!8m2!3d10.6342564!4d77.3375498!16s%2Fg%2F11stjr91pw?entry=ttu';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -153,17 +156,26 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                {/* Region / Location */}
+                {/* Region / Exact Google Map Location */}
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-2xl bg-white border border-sage/70 flex items-center justify-center flex-shrink-0 text-forest shadow-xs">
                     <MapPin className="w-5 h-5 text-earth-amber" />
                   </div>
-                  <div>
-                    <span className="text-xs uppercase font-medium text-forest/60">Operating Location</span>
+                  <div className="flex-1">
+                    <span className="text-xs uppercase font-medium text-forest/60">Farm Location</span>
                     <p className="text-base font-bold text-forest mt-0.5">
-                      Tamil Nadu, India
+                      வையகம் ஃபார்ம் (Vaiyagam Farms)
                     </p>
-                    <p className="text-xs text-forest/70">Direct agricultural sourcing network</p>
+                    <p className="text-xs text-forest/70 mb-2">Tamil Nadu, India</p>
+                    <a
+                      href={googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-leaf hover:underline"
+                    >
+                      <span>View on Google Maps</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -339,6 +351,47 @@ export default function ContactSection() {
             </div>
           </div>
 
+        </div>
+
+        {/* Interactive Google Map Location Card */}
+        <div className="mt-14 rounded-3xl overflow-hidden border border-sage/80 shadow-card bg-cream/50 p-6 sm:p-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sage/50 border border-sage text-forest text-xs font-semibold uppercase tracking-wider mb-2">
+                <MapPin className="w-3.5 h-3.5 text-leaf" />
+                <span>Google Maps Location</span>
+              </div>
+              <h3 className="font-heading text-2xl sm:text-3xl font-bold text-forest">
+                வையகம் ஃபார்ம் (Vaiyagam Farms)
+              </h3>
+              <p className="text-xs sm:text-sm text-forest/75 mt-1">
+                Coordinates: 10.6342564, 77.3375498 • Tamil Nadu, India
+              </p>
+            </div>
+
+            <a
+              href={googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-forest hover:bg-forest-light text-white text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all flex-shrink-0"
+            >
+              <Navigation className="w-4 h-4 text-leaf-light" />
+              <span>Get Directions on Google Maps</span>
+              <ArrowUpRight className="w-3.5 h-3.5 opacity-80" />
+            </a>
+          </div>
+
+          {/* Embedded Google Map iframe */}
+          <div className="relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-sage/70 shadow-xs bg-forest/5">
+            <iframe
+              title="வையகம் ஃபார்ம் (Vaiyagam Farms) Google Maps Location"
+              src="https://maps.google.com/maps?q=10.6342564,77.3375498&hl=en&z=15&output=embed"
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
         </div>
 
       </div>
