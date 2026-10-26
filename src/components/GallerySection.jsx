@@ -8,42 +8,47 @@ export default function GallerySection() {
   const galleryItems = [
     {
       id: 1,
-      title: 'Sunlit Fields',
-      tamilSubtitle: 'காலை கதிர்',
+      title: 'Love from Our Farm',
+      tamilSubtitle: 'இயற்கையின் அன்பு',
+      description: 'A little love from our land, grown with care.',
       image: getAssetUrl('images/gallery/gallery-1-sunlit-fields.jpg'),
-      alt: 'Lush green agricultural crop field bathed in morning sunbeams',
+      alt: 'Love from Our Farm - Lush green agricultural field bathed in morning sunbeams',
       span: 'md:col-span-2 lg:col-span-1',
     },
     {
       id: 2,
-      title: "Farmer's Smile",
-      tamilSubtitle: 'மகிழ்ச்சி உழைப்பு',
+      title: 'Grown with Love',
+      tamilSubtitle: 'உழைப்பின் பெருமை',
+      description: "Every harvest carries a farmer's love and dedication.",
       image: getAssetUrl('images/gallery/gallery-2-farmers-smile.jpg'),
-      alt: 'Smiling Tamil farmer woman working happily in fertile green fields',
+      alt: "Grown with Love - Smiling farmer tending fertile green fields with care",
       span: 'md:col-span-2 lg:col-span-1',
     },
     {
       id: 3,
-      title: 'Golden Dawn',
-      tamilSubtitle: 'விடியலின் ஒளி',
+      title: "Nature's First Light",
+      tamilSubtitle: 'புதிய நாளின் நம்பிக்கை',
+      description: 'Every sunrise brings new hope to our fields.',
       image: getAssetUrl('images/gallery/gallery-3-golden-dawn.png'),
-      alt: 'Farmer tending water fields at golden sunrise with sunburst reflections',
+      alt: "Nature's First Light - Farmer tending fields at golden sunrise",
       span: 'md:col-span-2 lg:col-span-1',
     },
     {
       id: 4,
-      title: 'Vegetable Rows',
-      tamilSubtitle: 'காய்கறி பாத்தி',
+      title: 'Freshness in Every Row',
+      tamilSubtitle: 'மண்ணிலிருந்து மனதிற்கு',
+      description: 'Naturally nurtured, freshly harvested, thoughtfully delivered.',
       image: getAssetUrl('images/gallery/gallery-4-vegetable-crops.jpg'),
-      alt: 'Fresh vegetable crops growing along structured soil beds with coconut groves in background',
+      alt: 'Freshness in Every Row - Vegetable crops growing along nurtured farm beds',
       span: 'md:col-span-2 lg:col-span-1',
     },
     {
       id: 5,
-      title: 'Farm Horizon',
-      tamilSubtitle: 'பசுமை பரப்பு',
+      title: 'Rooted in Nature',
+      tamilSubtitle: 'நம் மண்ணின் செழிப்பு',
+      description: 'Honouring our roots, growing a greener tomorrow.',
       image: getAssetUrl('images/gallery/gallery-5-farm-horizon.jpg'),
-      alt: 'Vast green and golden farmland panorama stretching to coconut groves',
+      alt: 'Rooted in Nature - Vast green and fertile agricultural farmland horizon',
       span: 'md:col-span-2 lg:col-span-2 lg:col-start-auto',
     },
   ];
@@ -113,19 +118,22 @@ export default function GallerySection() {
                   <Eye className="w-4 h-4 text-leaf" />
                 </div>
 
-                {/* Caption (One or Two Words) with Tamil subtitle */}
+                {/* Caption with Tamil subtitle, English title, and description */}
                 <div className="absolute bottom-5 left-5 right-5 text-white transform transition-transform duration-300">
                   <span className="tamil-text text-xs text-sage-light font-medium block mb-0.5 opacity-90">
                     {item.tamilSubtitle}
                   </span>
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-white drop-shadow-md">
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="font-heading text-lg sm:text-xl font-bold tracking-tight text-white drop-shadow-md">
                       {item.title}
                     </h3>
-                    <span className="text-xs px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0">
                       View
                     </span>
                   </div>
+                  <p className="text-xs text-white/85 line-clamp-2 mt-1.5 leading-snug font-normal drop-shadow-sm">
+                    {item.description}
+                  </p>
                 </div>
               </div>
             </div>
@@ -180,14 +188,17 @@ export default function GallerySection() {
               />
             </div>
 
-            <div className="mt-4 text-center text-white">
-              <span className="tamil-text text-sm text-leaf-light font-medium block">
+            <div className="mt-4 text-center text-white max-w-xl mx-auto px-4">
+              <span className="tamil-text text-sm sm:text-base text-leaf-light font-medium block">
                 {galleryItems[selectedImage].tamilSubtitle}
               </span>
-              <h4 className="font-heading text-2xl font-bold tracking-tight">
+              <h4 className="font-heading text-2xl sm:text-3xl font-bold tracking-tight mt-0.5">
                 {galleryItems[selectedImage].title}
               </h4>
-              <p className="text-xs text-sage-light/70 mt-1">
+              <p className="text-sm text-cream/90 mt-2 leading-relaxed">
+                {galleryItems[selectedImage].description}
+              </p>
+              <p className="text-xs text-sage-light/60 mt-3">
                 Photo {selectedImage + 1} of {galleryItems.length} • வையகம் Farms
               </p>
             </div>
