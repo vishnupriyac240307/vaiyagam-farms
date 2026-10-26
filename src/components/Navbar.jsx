@@ -13,6 +13,7 @@ export default function Navbar() {
     { name: 'Our Products', href: '#products', id: 'products' },
     { name: 'Quality', href: '#quality', id: 'quality' },
     { name: 'How We Work', href: '#how-it-works', id: 'how-it-works' },
+    { name: 'Gallery', href: '#gallery', id: 'gallery' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -27,7 +28,7 @@ export default function Navbar() {
 
       // Scroll Spy: Determine which section is currently active
       const scrollPosition = window.scrollY + 160;
-      const sectionIds = ['hero', 'about', 'products', 'quality', 'how-it-works', 'contact'];
+      const sectionIds = ['hero', 'about', 'products', 'quality', 'how-it-works', 'gallery', 'contact'];
 
       for (let i = sectionIds.length - 1; i >= 0; i--) {
         const el = document.getElementById(sectionIds[i]);

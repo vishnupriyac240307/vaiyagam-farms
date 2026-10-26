@@ -83,6 +83,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="#gallery" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <span className="w-1 h-1 rounded-full bg-leaf-light opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Farm Gallery</span>
+                </a>
+              </li>
+              <li>
                 <a href="#contact" className="hover:text-white transition-colors flex items-center gap-1.5 group">
                   <span className="w-1 h-1 rounded-full bg-leaf-light opacity-0 group-hover:opacity-100 transition-opacity" />
                   <span>Contact</span>

@@ -5,6 +5,7 @@ import AboutSection from './components/AboutSection';
 import ProductShowcase from './components/ProductShowcase';
 import QualityCommitment from './components/QualityCommitment';
 import HowWeWork from './components/HowWeWork';
+import GallerySection from './components/GallerySection';
 import TradingPartner from './components/TradingPartner';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -32,6 +33,9 @@ export default function App() {
 
         {/* How We Work 3-Step Process */}
         <HowWeWork />
+
+        {/* Real Farm Gallery Section */}
+        <GallerySection />
 
         {/* Trading Partner - SKY Traders (Tasteful lower section placement) */}
         <TradingPartner />
